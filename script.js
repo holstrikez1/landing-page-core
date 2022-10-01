@@ -61,15 +61,17 @@ const responsive = () => {
   if (window.innerWidth < 1200) {
     addBackGround();
   }
-  if (window.innerWidth < 991) {
+  if (window.innerWidth < 992) {
     addContentFPPT();
+    addCommon();
   }
 
   if (window.innerWidth >= 1200) {
     removeBackGround();
   }
-  if (window.innerWidth > 991) {
+  if (window.innerWidth > 992) {
     removeContentFPPT();
+    removeCommon();
   }
 };
 const removeComponent = () => {
@@ -158,6 +160,8 @@ const addContentFPPT = () => {
   let element1 = document.getElementById('text-context-fppt-wide');
   let element2 = document.getElementById('text-context-fppt-mobile');
   let element3 = document.getElementById('text-context-abbc-mobile');
+  let element4 = document.getElementById('img-fppt');
+  let element5 = document.getElementById('img-abbc');
   element1.innerHTML = '';
   element2.classList.add('text-center', 'content-text');
   element3.classList.add('text-center');
@@ -165,24 +169,40 @@ const addContentFPPT = () => {
   element3.style.fontSize = '0.75rem';
   element2.classList.remove('fs-5');
   element3.classList.remove('fs-5');
+  element4.classList.add('justify-content-center');
+  element5.classList.add('justify-content-center');
   element2.innerHTML =
     'คอร์ แอสเซท มุ่งเน้นบริหารจัดการดิจิตอลแอสเซท<br> <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 0.8rem;">สร้างระบบด้วยแนวคิด FPPT</b><br>เพื่อจัดการบริหารธุรกิจและส่งเสริมการสร้างผลิตภัณฑ์<br>ในเครือของบริษัทคอร์ แอสเซท';
   element3.innerHTML =
-    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 0.8rem;">เทคโนโลยี ABBC<br></b>เข้ามาบริหารจัดการธุรกิจ<br>ให้เกิดการ Sharing Economic บน Eco system ของตนเอง เพื่อสร้างสังคม<br>แห่งการแบ่งปันพร้อมทั้งต่อยอดธุรกิจ<br>ในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อม<br>ในการแข่งขันที่เพิ่มขึ้นในอนาคต';
+    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 0.8rem;">เทคโนโลยี ABBC<br></b>เข้ามาบริหารจัดการธุรกิจ<br>ให้เกิดการ Sharing Economic บน Eco system ของตนเอง<br> เพื่อสร้างสังคมแห่งการแบ่งปันพร้อมทั้งต่อยอดธุรกิจ<br>ในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อม<br>ในการแข่งขันที่เพิ่มขึ้นในอนาคต';
 };
 
 const removeContentFPPT = () => {
   let element1 = document.getElementById('text-context-fppt-wide');
   let element2 = document.getElementById('text-context-fppt-mobile');
   let element3 = document.getElementById('text-context-abbc-mobile');
+  let element4 = document.getElementById('img-fppt');
+  let element5 = document.getElementById('img-abbc');
   element1.classList.remove('text-center');
   element2.classList.remove('text-center', 'content-text');
   element3.classList.remove('text-center');
   element2.classList.add('fs-5');
   element3.classList.add('fs-5');
   element2.innerHTML = '';
+  element4.classList.remove('justify-content-center');
+  element5.classList.remove('justify-content-center');
   element1.innerHTML =
     ' คอร์ แอสเซท มุ่งเน้นบริหารจัดการดิจิตอลแอสเซท<br>   <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 1.5rem;">สร้างระบบด้วยแนวคิด FPPT </b><br>เพื่อจัดการบริหารธุรกิจและส่งเสริมการสร้างผลิตภัณฑ์<br>ในเครือของบริษัทคอร์ แอสเซท';
   element3.innerHTML =
-    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 1.5rem;">เทคโนโลยี ABBC</b><br>เข้ามาบริหารจัดการธุรกิจให้เกิดการ Sharing Economic บน Eco system<br>ของตนเอง เพื่อสร้างสังคมแห่งการแบ่งปัน<br>พร้อมทั้งต่อยอดธุรกิจในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อมในการแข่งขัน<br>ที่เพิ่มขึ้นในอนาคต';
+    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 1.5rem;">เทคโนโลยี ABBC</b><br>เข้ามาบริหารจัดการธุรกิจให้เกิดการ Sharing Economic บน Eco system<br>ของตนเอง เพื่อสร้างสังคมแห่งการแบ่งปันพร้อมทั้งต่อยอดธุรกิจ<br>ในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อมในการแข่งขัน<br>ที่เพิ่มขึ้นในอนาคต';
+};
+
+const addCommon = () => {
+  let logo = document.getElementById('img-logo');
+  logo.style.marginLeft = '00px';
+};
+
+const removeCommon = () => {
+  let logo = document.getElementById('img-logo');
+  logo.style.marginLeft = '60px';
 };
